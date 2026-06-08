@@ -145,3 +145,33 @@ document.getElementById("btn-search").addEventListener("click", () => {
     });
 });
 
+document.getElementById("get-btn").addEventListener("click",()=>{
+  const getMail = document.getElementById("input-email");
+  const mail = getMail.value;
+  const getPass = document.getElementById("input-pass");
+  const password = getPass.value;
+  if(mail == "login@gmail.com" && password == "1234"){
+    alert("Login Successful");
+  }
+  else{
+    alert("Failed");
+    return;
+  }
+
+});
+
+
+const links = document.querySelectorAll("#some-btn a");
+links.forEach(link => {
+  link.addEventListener("click",(event)=>{
+    event.preventDefault();
+    const targetId = link.getAttribute("href");
+    console.log(targetId);
+    const targetSection = document.querySelector(targetId);
+    console.log(targetSection)
+
+    targetSection.scrollIntoView({
+      behavior: "smooth",
+    });
+  })
+})

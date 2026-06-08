@@ -8,3 +8,20 @@
     background-color: #422ad5;
     color: white;
 }
+.navbar {
+    background: linear-gradient(
+        135deg, 
+        rgba(106, 17, 203, 0.25) 0%,   /* Translucent Purple */
+        rgba(37, 117, 252, 0.25) 100%  /* Translucent Blue */
+    );
+
+    /* 2. The frosted glass blur */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Safari support */
+
+    /* 3. Colorful subtle border to match the gradient vibe */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    
+    /* 4. Soft shadow to make the glass float */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
